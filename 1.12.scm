@@ -1,0 +1,23 @@
+(define (pascal n)
+	(define (line l)
+		(if (null? (cdr l))
+			(list 1)
+			(cons (+ (car l) (car (cdr l))) (line (cdr l)))))
+	(if (= n 1)
+		(list (list 1))
+		((lambda (p) (cons (line (cons 0 (car p))) p)) (pascal (- n 1)))))
+
+(define (reverse l)
+	(define (helper l res)
+		(if (null? l)
+			res
+			(helper (cdr l) (cons (car l) res))))
+	(helper l ()))
+
+(newline)
+(display (reverse (pascal 3)))
+(newline)
+(display (reverse (pascal 4)))
+(newline)
+(display (reverse (pascal 5)))
+(newline)
