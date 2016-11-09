@@ -1,7 +1,7 @@
 (define (accumulate op init seq)
-	(if (null? seq)
-		init
-		(op (car seq) (accumulate op init (cdr seq)))))
+    (if (null? seq)
+        init
+        (op (car seq) (accumulate op init (cdr seq)))))
 
 (define (accumulate-n op init seqs)
     (if (null? (car seqs))

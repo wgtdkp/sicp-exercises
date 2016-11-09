@@ -1,11 +1,11 @@
 (load "expect.scm")
 
 (define (reverse x)
-	(define (iter x res)
-		(cond ((null? x) res)
-			  ((not (pair? x)) x)
-			  (else (iter (cdr x) (cons (iter (car x) ()) res)))))
-	(iter x ()))
+    (define (iter x res)
+        (cond ((null? x) res)
+              ((not (pair? x)) x)
+              (else (iter (cdr x) (cons (iter (car x) ()) res)))))
+    (iter x ()))
 
 ; test
 (expect () (reverse ()))

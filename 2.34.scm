@@ -2,7 +2,7 @@
 (load "accumulate.scm")
 
 (define (horner x coeff)
-	(accumulate (lambda (a b) (+ a (* x b)))  0 coeff))
+    (accumulate (lambda (a b) (+ a (* x b)))  0 coeff))
 
 ; test
 (expect 0 (horner 10 ()))

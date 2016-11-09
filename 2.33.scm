@@ -2,13 +2,13 @@
 (load "accumulate.scm")
 
 (define (map op seq)
-	(accumulate (lambda (x y) (cons (op x) y)) () seq))
+    (accumulate (lambda (x y) (cons (op x) y)) () seq))
 
 (define (append seq1 seq2)
-	(accumulate cons seq2 seq1))
+    (accumulate cons seq2 seq1))
 
 (define (len seq)
-	(accumulate (lambda (x y) (+ 1 y)) 0 seq))
+    (accumulate (lambda (x y) (+ 1 y)) 0 seq))
 
 ; test
 (define op (lambda (x) (* x x)))

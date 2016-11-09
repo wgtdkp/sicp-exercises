@@ -2,10 +2,10 @@
 (load "2.38.scm")
 
 (define (reverse-fr seq)
-	(fold-right (lambda (x y) (append y (list x))) () seq))
+    (fold-right (lambda (x y) (append y (list x))) () seq))
 
 (define (reverse-fl seq)
-	(fold-left (lambda (x y) (cons y x)) () seq))
+    (fold-left (lambda (x y) (cons y x)) () seq))
 
 ; test
 (expect () (reverse-fr ()))

@@ -1,9 +1,9 @@
 (load "expect.scm")
 
 (define (fringe t)
-	(cond ((null? t) ())
-		  ((not (pair? t)) (list t))
-		  (else (append (fringe (car t)) (fringe (cdr t))))))
+    (cond ((null? t) ())
+          ((not (pair? t)) (list t))
+          (else (append (fringe (car t)) (fringe (cdr t))))))
 
 ; test
 (expect () (fringe ()))

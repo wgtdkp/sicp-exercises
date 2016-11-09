@@ -2,11 +2,11 @@
 (load "accumulate.scm")
 
 (define (count-leaves t)
-	(accumulate (lambda (x y) (if (not (pair? x))
-								  (+ 1 y)
-								  (+ (count-leaves x) y)))
-				0
-				t))
+    (accumulate (lambda (x y) (if (not (pair? x))
+                                  (+ 1 y)
+                                  (+ (count-leaves x) y)))
+                0
+                t))
 
 ; test
 (expect 0 (count-leaves ()))

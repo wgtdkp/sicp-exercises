@@ -1,18 +1,18 @@
 (load "expect.scm")
 
 (define (f n)
-	(if (< n 3)
-		n
-		(+ (f (- n 1))
-		   (* 2 (f (- n 2)))
+    (if (< n 3)
+        n
+        (+ (f (- n 1))
+           (* 2 (f (- n 2)))
            (* 3 (f (- n 3))))))
 
 (define (ff n)
-	(define (ff-iter n a b c)
-		(if (= n 0)
-			c
-			(ff-iter (- n 1) (+ a (* 2 b) (* 3 c)) a b)))
-	(ff-iter n 2 1 0))
+    (define (ff-iter n a b c)
+        (if (= n 0)
+            c
+            (ff-iter (- n 1) (+ a (* 2 b) (* 3 c)) a b)))
+    (ff-iter n 2 1 0))
 
 
 ; // test
