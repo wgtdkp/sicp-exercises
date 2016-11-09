@@ -1,2 +1,2 @@
 # sicp-exercises
-the implementation of problems in SICP
+the solution of problems in SICP
