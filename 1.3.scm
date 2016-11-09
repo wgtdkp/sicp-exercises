@@ -3,9 +3,7 @@
 (define (sum_max2 a b c)
     (if (> a c)
         (if (> b c) (+ a b) (+ a c))
-        (if (> b a) (+ c b) (+ a c))
-    )
-)
+        (if (> b a) (+ c b) (+ a c))))
 
 ; test
 (expect 5 (sum_max2 1 2 3))
